@@ -1,0 +1,18 @@
+{
+  "name": "nrs-impl",
+  "version": "1.0.0",
+  "description": "NRS implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node impl/generator.js",
+    "make_csv": "node scripts/make_csv.js"
+  },
+  "author": "ngoduyanh",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "csv": "^5.5.3",
+    "glob": "^7.2.0",
+    "jsonc": "^2.0.0"
+  }
+}
