@@ -168,11 +168,11 @@ function toEntry({
     let lovedChars = impacts.filter(i => i.type == exports.Impacts.Love)
         .map(i => {
             function date(str) {
-                return str.length == 0? new Date() : new Date(str);
+                return str.length == 0 ? new Date() : new Date(str);
             }
             function waifu(x) {
                 // return 10 * Math.tanh(x / 60);
-                return Math.min(10, x/6 - x*x*x/64800 + x*x*x*x*x/583200000);
+                return Math.min(10, x / 6 - x * x * x / 64800 + x * x * x * x * x / 583200000);
             }
             let days = i.periods
                 .map(p => (date(p.to) - date(p.from)) / 86400000)
@@ -234,7 +234,7 @@ function toEntry({
             meme: {
                 duration_standard_level: meme.duration.level,
                 strength: meme.strength,
-                killed_by: meme.killed_by,
+                killed_by: meme.killed_by || [],
                 value: 0
             },
             music: {
@@ -248,7 +248,7 @@ function toEntry({
         }
     };
 
-    ret.score.emotion.value = 
+    ret.score.emotion.value =
         ret.score.emotion.sad.value * 0.7 +
         ret.score.emotion.hype.value * 0.5 +
         ret.score.emotion.comfy.value * 0.3 +
@@ -264,30 +264,101 @@ function toEntry({
     return ret;
 }
 
+exports.combine = function ({
+    title = required("title"),
+    from = required("from"),
+    additional_nerf = undefined
+}) {
+    return {
+        title,
+        combine: true,
+        combine_from: from,
+        additional_nerf
+    };
+}
+
 exports.output = entries => {
     let content = {
         last_updated: new Date().toISOString(),
         entries: Object.entries(entries).map(([id, entry]) => {
-            try{
-                return toEntry({
+            if (entry.combine) {
+                return {
                     ...entry,
                     id: id
-                });
-            } catch (err) {
-                console.error(`error on entry: ${entry.title} (id: ${id}):`);
-                console.error(err);
+                };
+            } else {
+                try {
+                    return toEntry({
+                        ...entry,
+                        id: id
+                    });
+                } catch (err) {
+                    console.error(`error on entry: ${entry.title} (id: ${id}):`);
+                    console.error(err);
+                }
             }
         })
     };
+
+    function makeCombine(entry) {
+        if (!entry.combine) {
+            return;
+        }
+
+        let copy = { ...entry };
+        let froms = copy.combine_from.flatMap(id => {
+            let find = entries[id];
+            if (find) makeCombine(find);
+            return find ? [find] : [];
+        });
+        function rawMeme(meme) {
+            return meme? meme.duration.value * 0.9 + meme.strength * 0.1 : 0;
+        }
+        function clear(obj) {
+            for (var prop in obj) { if (obj.hasOwnProperty(prop)) { delete obj[prop]; } }
+        }
+        let from_memes = froms.map(e => e.meme || {
+            duration: exports.NRS_MEME.MLessThanADay,
+            strength: 0
+        })
+        let meme = { ...from_memes.reduce((m1, m2) => rawMeme(m1) > rawMeme(m2) ? m1 : m2) };
+        meme.killed_by = [...new Set(from_memes.flatMap(e => e.killed_by || []))];
+        clear(entry);
+
+        let music_combine_factor = 0.2;
+
+        let boredoms = froms.flatMap(e => e.boredom || exports.NRS_BR.Completed)
+            .filter(br => br != exports.NRS_BR.Other);
+
+        let boredom = boredoms.length > 0? 
+            boredoms.reduce((c1, c2) => c1.value > c2.value ? c2 : c1) : exports.NRS_BR.Other;
+
+        Object.assign(entry, toEntry({
+            id: copy.id,
+            title: copy.title,
+            type: "Franchise",
+            status: "Non-watchable",
+            seasonal: false,
+            impacts: froms.flatMap(e => e.impacts || []),
+            community: froms.flatMap(e => e.community || exports.NRS_CM.Neutral).reduce((c1, c2) => Math.abs(c1.value) > Math.abs(c2.value) ? c1 : c2),
+            boredom,
+            meme,
+            music: combine(froms.map(e => e.music || 0), music_combine_factor),
+            specials: froms.flatMap(e => e.specials || []),
+            additionals: copy.additional_nerf || froms.flatMap(e => e.additionals || [])
+        }));
+    }
+
+    content.entries.forEach(makeCombine);
 
     // meme compensation
     function calcMeme(entry) {
         let meme = entry.score.meme;
         let compensation = 0;
-        if (meme.killed_by) {
-            let matches = content.entries.filter(p => p.id == meme.killed_by);
-            if (matches.length > 0) {
-                compensation = calcMeme(matches[0]) * 0.1;
+        for (killer of meme.killed_by) {
+            let match = content.entries.find(p => p.id == killer);
+            if (match) {
+                compensation += calcMeme(match) * 0.1;
             }
         }
         return meme.strength * 0.1 + findImpact(exports.NRS_MEME, meme.duration_standard_level).value * 0.9 + compensation;
@@ -300,7 +371,7 @@ exports.output = entries => {
     fs.writeFileSync("impl/nrs.json", JSON.stringify(content, null, 4));
 };
 
-exports.empty_killed_by = id => {
+exports.empty_killed_by = function (...id) {
     return {
         strength: 0,
         duration: exports.NRS_MEME.MLessThanADay,

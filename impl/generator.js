@@ -1,10 +1,35 @@
 const {
-    Impacts, output, empty_killed_by,
+    Impacts, output, empty_killed_by, combine,
     NRS_BR, NRS_CH, NRS_CM, NRS_ED,
     NRS_HR, NRS_JH, NRS_MEME, NRS_SD
 } = require("../src/generator_lib");
 
 // Main part
+
+// YuYuYu has a lot of entries in NRS2 (just too based bro)
+// They all share the meme object
+const YuYuYuMeme = () => {
+    return {
+        /*
+        YuYuYu is pretty lucky to be watched in such an era where memes are absent,
+        I have to watch shitposts from YouTube for content, Magireco and Love Live
+        is pretty much dead, other seasonal animes are ganbare douki (one room 
+        duration = no memes), selection project (generic idol = no memes), battery
+        mecha thing (no memes), assasin isekai (hoantinh memes are milked from the
+        previous season, so little memes), mieruko (no memes).
+        Hence, they are able to achieve a monopoly, starting from Oct 22, 2021, and
+        it's continuing to this day (it has only been 8 days bruh).
+        sonoko Nogizaka46
+        idsuke can't fc ror hr
+        */
+        strength: 10,
+        duration: NRS_MEME.M2_3Weeks,
+        // xd killed by re stage lmao
+        killed_by: ["38009"]
+        // the yuyuyui incident too
+    }
+};
+
 output({
     // 5680 - K-On!
     "5680": {
@@ -105,7 +130,7 @@ output({
             strength: 10,
             duration: NRS_MEME.MMoreThan3Months,
             // Killed by Love Live Niji
-            killed_by: "40879"
+            killed_by: ["40879"]
         },
         // MadoMagi has a lot of bangers.
         music: 7
@@ -160,7 +185,7 @@ output({
             strength: 10,
             duration: NRS_MEME.MMoreThan3Months,
             // Killed by Love Live Niji
-            killed_by: "40879"
+            killed_by: ["40879"]
         },
         // It's a movie so music is very limited. Colorful is a banger tho.
         music: 3
@@ -289,6 +314,7 @@ output({
             duration: NRS_MEME.M3Weeks_1Month
         },
         // ebb and flow + osugame carries this shit
+        // ebb and flow 3 mod fc xd
         music: 7
     },
     // 16498 - Shingeki no Kyojin
@@ -402,7 +428,7 @@ output({
             // Also the anime itself without these historical events are still
             // very good. It's not just lucky
         ],
-        music: 3,
+        music: 9,
         best_girl: "Miyazono Kaori"
         // no memes because SLN era has no memes
         // it's just lIeN qUAn mOBiLe and dumb trendy shit
@@ -536,22 +562,7 @@ output({
             // }
         ],
         best_girl: "Yuuki Yuuna",
-        meme: {
-            /*
-            YuYuYu is pretty lucky to be watched in such an era where memes are absent,
-            I have to watch shitposts from YouTube for content, Magireco and Love Live
-            is pretty much dead, other seasonal animes are ganbare douki (one room 
-            duration = no memes), selection project (generic idol = no memes), battery
-            mecha thing (no memes), assasin isekai (hoantinh memes are milked from the
-            previous season, so little memes), mieruko (no memes).
-            Hence, they are able to achieve a monopoly, starting from Oct 22, 2021, and
-            it's continuing to this day (it has only been 8 days bruh).
-            sonoko Nogizaka46
-            idsuke can't fc ror hr
-            */
-            strength: 10,
-            duration: NRS_MEME.M1_2Weeks
-        },
+        meme: YuYuYuMeme(),
         /*
         Opening is meh.  
         Ending is good ngl. The contrast between the problems the main girls meet and
@@ -1172,7 +1183,9 @@ output({
 
         meme: {
             strength: 10,
-            duration: NRS_MEME.MMoreThan3Months
+            duration: NRS_MEME.MMoreThan3Months,
+            // Killed by Love Live Niji
+            killed_by: ["40879"]
         },
         // Gomakashi was good
         music: 3,
@@ -1239,7 +1252,7 @@ output({
             // first war victim
             strength: 0,
             duration: NRS_MEME.MLessThanADay,
-            killed_by: "38256"
+            killed_by: ["38256"]
         },
         boredom: NRS_BR.Dropped,
         best_girl: "Maple"
@@ -1267,7 +1280,7 @@ output({
     "38992": {
         title: "Rikei ga Koi ni Ochita no de Shoumei shitemita.",
         best_girl: "Kanade Kotonoha",
-        killed_by: "38256"
+        killed_by: ["38256"]
     },
     // 39324 - Uchi no Ko no Tame naraba, Ore wa Moshikashitara Maou mo Taoseru kamo Shirenai.
     "39324": {
@@ -1305,7 +1318,7 @@ output({
             strength: 2,
             duration: NRS_MEME.M1_3Days,
             // killed by lapis re lights lmao xd
-            killed_by: "37587"
+            killed_by: ["37587"]
         },
         impacts: [
             {
@@ -1328,10 +1341,11 @@ output({
         meme: {
             strength: 1,
             duration: NRS_MEME.M1_3Days,
-            killed_by: "40879"
+            killed_by: ["40879"]
         },
         // music is good ig
-        music: 3,
+        // the canon song slaps tho
+        music: 5,
 
     },
     // 39783 - 5-toubun no Hanayome ∬
@@ -1365,8 +1379,9 @@ output({
         meme: {
             strength: 0,
             duration: NRS_MEME.MLessThanADay,
-            killed_by: "40879"
-        }
+            killed_by: ["40879"]
+        },
+        boredom: NRS_BR.OnHold
     },
     // 39988 - Isekai Quartet 2
     "39988": {
@@ -1395,7 +1410,7 @@ output({
         meme: {
             strength: 0,
             duration: NRS_MEME.MLessThanADay,
-            killed_by: "V12849"
+            killed_by: ["V12849"]
         },
         best_girl: "Minamoto Sakura",
         // OP is good
@@ -1425,7 +1440,7 @@ output({
         meme: {
             strength: 8,
             duration: NRS_MEME.M1_2Weeks,
-            killed_by: "40879"
+            killed_by: ["40879"]
         },
     },
     // 40783 - Shachou, Battle no Jikan Desu!
@@ -1501,7 +1516,7 @@ output({
         meme: {
             duration: NRS_MEME.MMoreThan3Months,
             strength: 10,
-            killed_by: "M2"
+            killed_by: ["M2"]
         },
         music: 7
     },
@@ -1514,7 +1529,7 @@ output({
         meme: {
             strength: 0,
             duration: NRS_MEME.MLessThanADay,
-            killed_by: "40879"
+            killed_by: ["40879"]
         },
         // yunomi ig
         // (it's not that good tbh)
@@ -1560,7 +1575,7 @@ output({
         meme: {
             strength: 0,
             duration: NRS_MEME.MLessThanADay,
-            killed_by: "40879"
+            killed_by: ["40879"]
         },
         best_girl: "Hiiragi Nana"
     },
@@ -1572,7 +1587,7 @@ output({
         meme: {
             strength: 0,
             duration: NRS_MEME.MLessThanADay,
-            killed_by: "40879"
+            killed_by: ["40879"]
         },
     },
     // 40842 - Idoly Pride
@@ -1585,7 +1600,8 @@ output({
             duration: NRS_MEME.M1_2Weeks,
             killedBy: "35585"
         },
-        best_girl: "Kawasaki Sakura"
+        best_girl: "Kawasaki Sakura",
+        music: 4
     },
     M1: {
         type: "Music",
@@ -1636,7 +1652,6 @@ output({
             0.25
         ]
     },
-    // And then, the world after Kano-era
     G1: {
         title: "Magia Record: Mahou Shoujo Madoka★Magica Gaiden",
         type: "Game",
@@ -1673,9 +1688,13 @@ output({
         // Community is good
         community: NRS_CM.Good,
 
+        boredom: NRS_BR.Other,
+
         meme: {
             strength: 10,
-            duration: NRS_MEME.MMoreThan3Months
+            duration: NRS_MEME.MMoreThan3Months,
+            // Killed by Love Live Niji
+            killed_by: ["40879"]
         },
         // Kakawari and Utsuroi were good
         // also
@@ -1697,7 +1716,7 @@ output({
         meme: {
             strength: 8,
             duration: NRS_MEME.M3Weeks_1Month,
-            killed_by: "V27448"
+            killed_by: ["V27448"]
         },
         // OST really good
         music: 5,
@@ -1713,6 +1732,11 @@ output({
                         to: "2021-06-16"
                     }
                 ]
+            },
+            {
+                type: Impacts.Sad,
+                pads: 1,
+                score: NRS_SD.PADS
             }
         ],
         // best_girl: "Satouin Reiko"
@@ -1723,6 +1747,7 @@ output({
         title: "ATRI -My Dear Moments-",
         status: "Watching",
         //top kek
+        boredom: NRS_BR.OnHold,
         impacts: [
             {
                 // the plot twist is really sad
@@ -1733,7 +1758,7 @@ output({
         meme: {
             strength: 5,
             duration: NRS_MEME.M1_2Weeks,
-            killed_by: "enigmatica 2 expert"
+            killed_by: ["enigmatica 2 expert"]
         },
         // OP kinda bops
         music: 3
@@ -1772,7 +1797,7 @@ output({
         meme: {
             strength: 6,
             duration: NRS_MEME.MLessThanADay,
-            killed_by: "41530"
+            killed_by: ["41530"]
         }
     },
     // 40904 - Bokutachi no Remake
@@ -1800,7 +1825,7 @@ output({
         meme: {
             strength: 10,
             duration: NRS_MEME.M1_2Months,
-            killed_by: "41530"
+            killed_by: ["41530"]
         }
     },
     // 41169 - Love Live! Superstar!!
@@ -1810,7 +1835,7 @@ output({
         meme: {
             strength: 5,
             duration: NRS_MEME.M4_7Days,
-            killed_by: "41530"
+            killed_by: ["41530"]
         },
         best_girl: "Arashi Chisato",
         boredom: NRS_BR.OnHold,
@@ -1830,7 +1855,7 @@ output({
         meme: {
             strength: 7,
             duration: NRS_MEME.M2_3Weeks,
-            killed_by: "25519"
+            killed_by: ["F25519", "38009"]
         },
     },
     // 48483 - Mieruko-chan
@@ -1840,7 +1865,7 @@ output({
         // watching this is quite frustating ngl
         best_girl: "Yotsuya Miko",
         boredom: NRS_BR.KindaBoring(8),
-        meme: empty_killed_by("25519")
+        meme: empty_killed_by("F25519", "38009")
     },
     // 44275 - Selection Project
     "44275": {
@@ -1855,7 +1880,7 @@ output({
             // the CG in this anime actually looks great
             0.1
         ],
-        meme: empty_killed_by("25519")
+        meme: empty_killed_by("F25519", "38009")
     },
     // 48644 - Gyakuten Sekai no Denchi Shoujo
     "48644": {
@@ -1864,7 +1889,7 @@ output({
         // background somewhat similar to yuyuyu
         status: "Watching",
         best_girl: "Akagi Rin",
-        meme: empty_killed_by("25519")
+        meme: empty_killed_by("F25519", "38009")
     },
     // And now...
     // The yuyuyu sequels!
@@ -1874,6 +1899,14 @@ output({
         title: "Nogi Wakaba wa Yuusha de Aru",
         // Oregairu is dropped so this is the only LN
         // that could be completed, which is kinda huge
+
+        // Update Nov 6, 2021:
+        // This LN reading progress will be paused to prioritize the anime.
+        // Issue #10 will try to make both S3 and NoWaYu LN get all of the 
+        // scores they deserve.
+
+        // Update Nov 12, 2021:
+        // ln killed the franchise kek
 
         impacts: [
             {
@@ -1905,11 +1938,7 @@ output({
         // (using basically the same girl is kinda unfair)
         // is Koori Chikage (man)
         best_girl: "Takashima Yuuna",
-        meme: {
-            // idc it's still in the franchise
-            strength: 10,
-            duration: NRS_MEME.M1_2Weeks
-        },
+        meme: YuYuYuMeme(),
         // Also, this LN is read at the same pace as Yuyuyu S3.
         // If I wanted, I would have already finished this way
         // sooner. Therefore, this LN will be delayed, but it's
@@ -1929,7 +1958,7 @@ output({
 
         // she looked like best girl ngl
         best_girl: "Tougou Mimori", // or Sumi Washio
-        
+
         impacts: [
             {
                 // gin's death and sonoko spamming magia are sad
@@ -1939,11 +1968,7 @@ output({
                 score: NRS_SD.NoticableNegativity(1)
             }
         ],
-        meme: {
-            // idc it's still in the franchise
-            strength: 10,
-            duration: NRS_MEME.M1_2Weeks
-        }
+        meme: YuYuYuMeme()
     },
     // 34445 - Yuuki Yuuna wa Yuusha de Aru: Yuusha no Shou
     "34445": {
@@ -1958,23 +1983,23 @@ output({
                 // The fact that Yuuki Yuuna uses the
                 // tenets to argue even makes the shit
                 // sadder
-                // literally the apex of drama wtf
+                // literally the vertex of drama wtf
+                //                  ^
+                //                  yuyuyu reference !!!11!!1
                 type: Impacts.Sad,
                 score: NRS_SD.AppreciableNegativity(5)
                 // no pads tho
             }
         ],
-        meme: {
-            // idc it's still in the franchise
-            strength: 10,
-            duration: NRS_MEME.M1_2Weeks
-        },
+        meme: YuYuYuMeme(),
         // music was meh tho
     },
     // And the present day
     // 42587 - Yuuki Yuuna wa Yuusha de Aru: Dai Mankai no Shou
     "42587": {
         title: "Yuuki Yuuna wa Yuusha de Aru: Dai Mankai no Shou",
+        seasonal: true,
+        status: "Watching",
         // I expected this to make a new Ayumu-era (something like
         // Yuuna-era or some dumb shit like that), but it doesn't
         // give a fuck by adapting KuMeYu and NoWaYu in the first
@@ -1988,7 +2013,7 @@ output({
                 // E5-20:17
                 // YLIA flashbacks
                 type: Impacts.Sad,
-                score: NRS_SD.NoticableNegativity(1)
+                score: NRS_SD.NoticableNegativity(1.5)
             }
         ],
         best_girl: "Yuuki Yuuna",
@@ -1996,11 +2021,191 @@ output({
         // and for NoWaYu is Takashima Yuuna (then Koori Chikage if you can't
         // accept a Yuuna clone)
 
-        meme: {
-            // idc it's still in the franchise
-            strength: 10,
-            duration: NRS_MEME.M1_2Weeks
-        },
+        meme: YuYuYuMeme(),
         // music was meh tho
-    }
+        // update: the udon stream map is good
+        // https://www.youtube.com/watch?v=s4r_wsszkpk
+        // sonoko nogizaka46 yubi bouenkyou anime ban fate fiery extreme armin adventure sotarks new adventure
+        music: 2
+    },
+    // 38009 - Re:Stage! Dream Days♪
+    "38009": {
+        title: "Re:Stage! Dream Days♪",
+        // based anime
+        // based music
+        // banger
+        // nanahira xd
+        best_girl: "Hasegawa Minori",
+        // funny lmao
+
+        // 367days and ld
+        // kirameki and overture
+        // the yes we are 1-2 map
+        // op and ed decent ig
+        // literally best raw music anime
+        music: 9,
+        // the re stage niji incident
+        impacts: [
+            {
+                type: Impacts.Comfy,
+                pads: 1,
+                score: NRS_CH.PADS
+            }
+        ],
+        meme: {
+            strength: 8,
+            duration: NRS_MEME.M1_3Days
+        },
+        // the kirare killing yuyuyu incident omegalul
+        // he downloaded the game top kek
+        // plasma gun stage
+
+        // based kano reference
+        additionals: [
+            // reviving idol animes
+            // 0.1
+        ]
+    },
+    // 34177 - Tenshi no 3P!
+    "34177": {
+        title: "Tenshi no 3P!",
+        best_girl: "Toriumi Sakura",
+        // OP is catJAM osugame
+        // fuck the ED i hate that map 
+        music: 5,
+        // funny ig idk
+    },
+    // 17919 - Houkago no Pleiades (TV)
+    "17919": {
+        title: "Houkago no Pleiades (TV)",
+        best_girl: "Subaru",
+        // OP is the famous Stella-rium
+        // ED is good ig
+        music: 5
+        // btw a mc of this anime has the name itsuki xd
+        // yuyuyu reference
+        // mc kissed lmao xd
+    },
+    // 38826 - Tenki no Ko
+    "38826": {
+        title: "Tenki no Ko",
+        best_girl: "Amano Hina",
+        impacts: [
+            {
+                type: Impacts.Sad,
+                score: NRS_SD.AppreciableNegativity(4)
+            }
+        ],
+        music: 3,
+    },
+    // Franchises
+    "F14813": combine({
+        title: "Yahari Ore no Seishun Love Comedy wa Machigatteiru. (Franchise Entry)",
+        from: ["14813", "23847", "39547"]
+    }),
+    // F25519-1 - Yuuki Yuuna wa Yuusha de Aru (the three seasons)
+    "F25519-1": combine({
+        title: "Yuuki Yuuna wa Yuusha de Aru (Franchise Entry)",
+        from: ["25519", "34445", "42587"]
+    }),
+    // F25519-1 - Yuusha de Aru series (the three YuYuYu TV seasons + WaSuYu (TV) + NoWaYu (LN))
+    "F25519-2": combine({
+        title: "Yuusha de Aru (Franchise Entry)",
+        from: ["25519", "34445", "42587", "34284", "L90810"]
+    }),
+    // F9756-1 - Mahou Shoujo Madoka★Magica (without MagiReco)
+    "F9756-1": combine({
+        title: "Mahou Shoujo Madoka★Magica (Franchise Entry without MagiReco)",
+        from: ["9756", "11981"]
+    }),
+    // F9756-2 - Mahou Shoujo Madoka★Magica (with MagiReco)
+    "F9756-2": combine({
+        title: "Mahou Shoujo Madoka★Magica (Franchise Entry with MagiReco)",
+        from: ["9756", "11981", "G1", "38256", "41530"],
+        // G1 and 38256 both have 0.5 additional score for gate-opening gacha games
+        additional_nerf: [0.5]
+    }),
+    // FG1 - Magia Record: Mahou Shoujo Madoka★Magica Gaiden
+    "FG1": combine({
+        title: "Magia Record: Mahou Shoujo Madoka★Magica Gaiden (Franchise Entry)",
+        from: ["G1", "38256", "41530"],
+        // G1 and 38256 both have 0.5 additional score for gate-opening gacha games
+        additional_nerf: [0.5]
+    }),
+    // F15051-1 - Love Live! (without NijiGaku)
+    // (some ppl say that niji isn't official, more like a side story idc)
+    "F15051-1": combine({
+        title: "Love Live! (Franchise Entry without NijiGaku)",
+        from: ["15051", "32526", "41169"]
+    }),
+    // F15051-2 - Love Live! (with NijiGaku)
+    "F15051-2": combine({
+        title: "Love Live! (Franchise Entry with NijiGaku)",
+        from: ["15051", "32526", "40879", "41169"]
+    }),
+    // F14741 - Chuunibyou demo Koi ga Shitai!
+    "F14741": combine({
+        title: "Chuunibyou demo Koi ga Shitai!",
+        from: ["14741", "18671", "35608"]
+    }),
+    "F11887": combine({
+        title: "Kokoro Connect (Franchise Entry)",
+        from: ["11887", "16001"]
+    }),
+    "F23277": combine({
+        title: "Saenai Heroine no Sodatekata (Franchise Entry)",
+        from: ["23277", "30727"]
+    }),
+    "F32281": combine({
+        title: "Shinkai Makoto's Movies (Franchise Entry)",
+        from: ["32281", "38826"]
+    }),
+    "F33573": combine({
+        title: "BanG Dream! (Franchise Entry)",
+        from: ["33573", "37869"]
+    }),
+    "F38136": combine({
+        title: "Bokutachi wa Benkyou ga Dekinai (Franchise Entry)",
+        from: ["38136", "40004"]
+    }),
+    "F5680": combine({
+        title: "K-On! (Franchise Entry)",
+        from: ["5680", "7791", "9617"]
+    }),
+    "F38101": combine({
+        title: "5-toubun no Hanayome (Franchise Entry)",
+        from: ["38101", "39783"]
+    }),
+    "F11757": combine({
+        title: "Sword Art Online (Franchise Entry)",
+        from: ["11757", "21881", "31765"]
+    }),
+    "F16498": combine({
+        title: "Shingeki no Kyojin (Franchise Entry)",
+        from: ["16498", "25777", "35760", "38524"]
+    }),
+    "F37976": combine({
+        title: "Zombieland Saga (Franchise Entry)",
+        from: ["37976", "40174"]
+    }),
+    "F10278": combine({
+        title: "The iDOLM@STER (Franchise Entry)",
+        from: ["10278", "23587", "30344"]
+    }),
+    "F23587": combine({
+        title: "The iDOLM@STER Cinderella Girls (Franchise Entry)",
+        from: ["23587", "30344"]
+    }),
+    "F39468": combine({
+        title: "Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen (Franchise Entry)",
+        from: ["39468", "40815"]
+    }),
+    "F38691": combine({
+        title: "Dr. Stone (Franchise Entry)",
+        from: ["38691", "40852"]
+    }),
+    "F38472": combine({
+        title: "Isekai Quartet (Franchise Entry)",
+        from: ["38472", "39988"]
+    })
 });
