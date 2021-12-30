@@ -1,5 +1,5 @@
 {
-    "last_updated": "2021-11-26T07:28:33.685Z",
+    "last_updated": "2021-12-30T11:40:45.210Z",
     "entries": [
         {
             "id": "5680",
@@ -2338,7 +2338,7 @@
                     "killed_by": [
                         "38009"
                     ],
-                    "value": 6.57
+                    "value": 7.220000000000001
                 },
                 "music": {
                     "value": 8
@@ -2347,7 +2347,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 11.075499999999998
+                "value": 11.172999999999998
             }
         },
         {
@@ -3690,7 +3690,7 @@
                     "killed_by": [
                         "38009"
                     ],
-                    "value": 6.57
+                    "value": 7.220000000000001
                 },
                 "music": {
                     "value": 4
@@ -3699,7 +3699,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 4.3305
+                "value": 4.428
             }
         },
         {
@@ -3834,7 +3834,7 @@
                     "killed_by": [
                         "38009"
                     ],
-                    "value": 6.57
+                    "value": 7.220000000000001
                 },
                 "music": {
                     "value": 0
@@ -3843,7 +3843,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 6.5104999999999995
+                "value": 6.608
             }
         },
         {
@@ -5807,19 +5807,21 @@
                     "value": 7.06
                 },
                 "meme": {
-                    "duration_standard_level": 1,
-                    "strength": 8,
+                    "duration_standard_level": 6,
+                    "strength": 10,
                     "killed_by": [],
-                    "value": 1.7000000000000002
+                    "value": 8.2
                 },
                 "music": {
                     "value": 9
                 },
                 "additional": {
-                    "scores": [],
-                    "value": 0
+                    "scores": [
+                        0.25
+                    ],
+                    "value": 0.25
                 },
-                "value": 6.7059999999999995
+                "value": 7.930999999999999
             }
         },
         {
@@ -6243,6 +6245,80 @@
                     "value": 0
                 },
                 "value": 2.5999999999999996
+            }
+        },
+        {
+            "id": "38544",
+            "title": "Egao no Daika",
+            "type": "Anime",
+            "status": "Completed",
+            "seasonal": false,
+            "score": {
+                "emotion": {
+                    "sad": {
+                        "impacts": [
+                            {
+                                "standard_level": 1,
+                                "pads": 0,
+                                "value": 5
+                            }
+                        ],
+                        "value": 5
+                    },
+                    "hype": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "comfy": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "love": {
+                        "chars": [],
+                        "value": 0
+                    },
+                    "humor": {
+                        "value": 0
+                    },
+                    "thriller": {
+                        "value": 0
+                    },
+                    "education": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "horror": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "community": {
+                        "standard_level": 1,
+                        "value": 0
+                    },
+                    "boredom": {
+                        "standard_level": 3,
+                        "value": 10
+                    },
+                    "special_emotions": {
+                        "scores": [],
+                        "value": 0
+                    },
+                    "value": 6.5
+                },
+                "meme": {
+                    "duration_standard_level": 0,
+                    "strength": 0,
+                    "killed_by": [],
+                    "value": 0
+                },
+                "music": {
+                    "value": 3
+                },
+                "additional": {
+                    "scores": [],
+                    "value": 0
+                },
+                "value": 5.675
             }
         },
         {
@@ -7212,13 +7288,13 @@
                     "value": 2.1
                 },
                 "music": {
-                    "value": 3
+                    "value": 5
                 },
                 "additional": {
                     "scores": [],
                     "value": 0
                 },
-                "value": 3.0149999999999997
+                "value": 3.1149999999999998
             }
         },
         {
@@ -8632,7 +8708,7 @@
                     "killed_by": [
                         "38009"
                     ],
-                    "value": 6.57
+                    "value": 7.220000000000001
                 },
                 "music": {
                     "value": 2
@@ -8641,7 +8717,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 4.528
+                "value": 4.6255
             }
         },
         {
@@ -8845,7 +8921,7 @@
                         "F25519",
                         "38009"
                     ],
-                    "value": 0.17000000000000004
+                    "value": 0.82
                 },
                 "music": {
                     "value": 0
@@ -8854,7 +8930,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 2.6605
+                "value": 2.7579999999999996
             }
         },
         {
@@ -9056,7 +9132,7 @@
                         "F25519",
                         "38009"
                     ],
-                    "value": 6.2700000000000005
+                    "value": 6.920000000000001
                 },
                 "music": {
                     "value": 0
@@ -9065,7 +9141,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 1.4505
+                "value": 1.548
             }
         },
         {
@@ -9127,7 +9203,7 @@
                         "F25519",
                         "38009"
                     ],
-                    "value": 0.17000000000000004
+                    "value": 0.82
                 },
                 "music": {
                     "value": 0
@@ -9136,7 +9212,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 2.0655
+                "value": 2.163
             }
         },
         {
@@ -9198,7 +9274,7 @@
                         "F25519",
                         "38009"
                     ],
-                    "value": 0.17000000000000004
+                    "value": 0.82
                 },
                 "music": {
                     "value": 0
@@ -9207,7 +9283,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 2.5755
+                "value": 2.6729999999999996
             }
         },
         {
@@ -9239,7 +9315,7 @@
                                         "to": ""
                                     }
                                 ],
-                                "influential_days": 329.3115010185185,
+                                "influential_days": 363.4866344097222,
                                 "value": 10
                             }
                         ],
@@ -9682,7 +9758,7 @@
                     "killed_by": [
                         "38009"
                     ],
-                    "value": 6.57
+                    "value": 7.220000000000001
                 },
                 "music": {
                     "value": 0
@@ -9691,7 +9767,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 6.5104999999999995
+                "value": 6.608
             }
         },
         {
@@ -9875,7 +9951,7 @@
                     "killed_by": [
                         "38009"
                     ],
-                    "value": 6.57
+                    "value": 7.220000000000001
                 },
                 "music": {
                     "value": 8.4
@@ -9884,7 +9960,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 11.726199999999999
+                "value": 11.823699999999999
             }
         },
         {
@@ -9977,7 +10053,7 @@
                     "killed_by": [
                         "38009"
                     ],
-                    "value": 6.57
+                    "value": 7.220000000000001
                 },
                 "music": {
                     "value": 8.88
@@ -9986,7 +10062,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 11.841592
+                "value": 11.939092
             }
         },
         {
@@ -11633,6 +11709,152 @@
                     "value": 0
                 },
                 "value": 0.51
+            }
+        },
+        {
+            "id": "G2",
+            "title": "Re:Stage! Prism Step",
+            "type": "Game",
+            "status": "Completed",
+            "seasonal": false,
+            "score": {
+                "emotion": {
+                    "sad": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "hype": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "comfy": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "love": {
+                        "chars": [],
+                        "value": 0
+                    },
+                    "humor": {
+                        "value": 0
+                    },
+                    "thriller": {
+                        "value": 0
+                    },
+                    "education": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "horror": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "community": {
+                        "standard_level": 1,
+                        "value": 0
+                    },
+                    "boredom": {
+                        "standard_level": 4,
+                        "value": 5
+                    },
+                    "special_emotions": {
+                        "scores": [],
+                        "value": 0
+                    },
+                    "value": 1.5
+                },
+                "meme": {
+                    "duration_standard_level": 6,
+                    "strength": 10,
+                    "killed_by": [],
+                    "value": 8.2
+                },
+                "music": {
+                    "value": 9
+                },
+                "additional": {
+                    "scores": [
+                        0.25
+                    ],
+                    "value": 0.25
+                },
+                "value": 3.205
+            }
+        },
+        {
+            "id": "FG2",
+            "title": "Re:Stage! (Franchise Entry)",
+            "type": "Franchise",
+            "status": "Non-watchable",
+            "seasonal": false,
+            "score": {
+                "emotion": {
+                    "sad": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "hype": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "comfy": {
+                        "impacts": [
+                            {
+                                "standard_level": 1,
+                                "pads": 1,
+                                "value": 13.533333333333333
+                            }
+                        ],
+                        "value": 13.533333333333333
+                    },
+                    "love": {
+                        "chars": [],
+                        "value": 0
+                    },
+                    "humor": {
+                        "value": 0
+                    },
+                    "thriller": {
+                        "value": 0
+                    },
+                    "education": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "horror": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "community": {
+                        "standard_level": 1,
+                        "value": 0
+                    },
+                    "boredom": {
+                        "standard_level": 3,
+                        "value": 10
+                    },
+                    "special_emotions": {
+                        "scores": [],
+                        "value": 0
+                    },
+                    "value": 7.06
+                },
+                "meme": {
+                    "duration_standard_level": 6,
+                    "strength": 10,
+                    "killed_by": [],
+                    "value": 8.2
+                },
+                "music": {
+                    "value": 10.8
+                },
+                "additional": {
+                    "scores": [
+                        0.25
+                    ],
+                    "value": 0.25
+                },
+                "value": 8.020999999999999
             }
         }
     ]

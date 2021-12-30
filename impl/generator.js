@@ -30,6 +30,21 @@ const YuYuYuMeme = () => {
     }
 };
 
+const ReStageMeme = () => {
+    return {
+        strength: 10,
+        duration: NRS_MEME.M1_2Months
+    };
+};
+
+const ReStageAdditionals = () => {
+    return [
+        // well it kinda revive 5 million idol franchises so
+        // basically a idol gate-opening score idk
+        0.25
+    ]
+}
+
 output({
     // 5680 - K-On!
     "5680": {
@@ -2035,7 +2050,7 @@ output({
         // based music
         // banger
         // nanahira xd
-        best_girl: "Hasegawa Minori",
+        best_girl: "Aone Shikimiya",
         // funny lmao
 
         // 367days and ld
@@ -2052,19 +2067,13 @@ output({
                 score: NRS_CH.PADS
             }
         ],
-        meme: {
-            strength: 8,
-            duration: NRS_MEME.M1_3Days
-        },
+        meme: ReStageMeme(),
         // the kirare killing yuyuyu incident omegalul
         // he downloaded the game top kek
         // plasma gun stage
 
         // based kano reference
-        additionals: [
-            // reviving idol animes
-            // 0.1
-        ]
+        additionals: ReStageAdditionals()
     },
     // 34177 - Tenshi no 3P!
     "34177": {
@@ -2207,5 +2216,33 @@ output({
     "F38472": combine({
         title: "Isekai Quartet (Franchise Entry)",
         from: ["38472", "39988"]
-    })
+    }),
+    "G2": {
+        title: "Re:Stage! Prism Step",
+        type: "Game",
+        best_girl: "Aone Shikimiya",
+        boredom: NRS_BR.Other,
+
+        meme: ReStageMeme(),
+        music: 9,
+
+        additionals: ReStageAdditionals()
+    },
+    "FG2": combine({
+        title: "Re:Stage! (Franchise Entry)",
+        from: ["38009", "G2"],
+        additional_nerf: ReStageAdditionals()
+    }),
+    // 38544 - Egao no Daika
+    "38544": {
+        title: "Egao no Daika",
+        best_girl: "Yuuki Soleil",
+        impacts: [
+            {
+                type: Impacts.Sad,
+                score: NRS_SD.AppreciableNegativity(5)
+            }
+        ],
+        music: 3,
+    },
 });
