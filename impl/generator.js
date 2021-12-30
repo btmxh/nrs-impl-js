@@ -1884,9 +1884,8 @@ output({
     "44275": {
         title: "Selection Project",
         // the pp anime s2
-        best_girl: "Hananoi Rena",
-        // tbh uta look cuter
-        // best_girl: "Koizumi Uta",
+        // pedo alert xd
+        best_girl: "Koizumi Uta",
 
         specials: [
             // the CG in this anime actually looks great
@@ -1901,7 +1900,16 @@ output({
         // background somewhat similar to yuyuyu
         status: "Completed",
         best_girl: "Akagi Rin",
-        meme: empty_killed_by("F25519", "FG2")
+        meme: empty_killed_by("F25519", "FG2"),
+        // loved the interactions between the characters
+        // literally harem anime but not annoying
+        // comedy was so good tho
+        impacts: [
+            {
+                type: Impacts.Comfy,
+                score: NRS_CH.NoticableComfiness(1)
+            }
+        ]
     },
     // And now...
     // The yuyuyu sequels!
