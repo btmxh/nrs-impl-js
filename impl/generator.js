@@ -1862,7 +1862,6 @@ output({
     "47790": {
         title: "Sekai Saikou no Ansatsusha, Isekai Kizoku ni Tensei suru",
         // the hoan tinh anime pt.2
-        status: "Watching",
         best_girl: "Dia", // *insert love live sunshine joke*
         // i ran out of patience with this shit
         // (no dia in ep 5)
@@ -1870,23 +1869,21 @@ output({
         meme: {
             strength: 7,
             duration: NRS_MEME.M2_3Weeks,
-            killed_by: ["F25519", "38009"]
+            killed_by: ["F25519", "FG2"]
         },
     },
     // 48483 - Mieruko-chan
     "48483": {
         title: "Mieruko-chan",
-        status: "Watching",
         // watching this is quite frustating ngl
         best_girl: "Yotsuya Miko",
-        boredom: NRS_BR.KindaBoring(8),
-        meme: empty_killed_by("F25519", "38009")
+        boredom: NRS_BR.Dropped,
+        meme: empty_killed_by("F25519", "FG2")
     },
     // 44275 - Selection Project
     "44275": {
         title: "Selection Project",
         // the pp anime s2
-        status: "Watching",
         best_girl: "Hananoi Rena",
         // tbh uta look cuter
         // best_girl: "Koizumi Uta",
@@ -1895,16 +1892,16 @@ output({
             // the CG in this anime actually looks great
             0.1
         ],
-        meme: empty_killed_by("F25519", "38009")
+        meme: empty_killed_by("F25519", "FG2")
     },
     // 48644 - Gyakuten Sekai no Denchi Shoujo
     "48644": {
         title: "Gyakuten Sekai no Denchi Shoujo",
         // battery waifu
         // background somewhat similar to yuyuyu
-        status: "Watching",
+        status: "Completed",
         best_girl: "Akagi Rin",
-        meme: empty_killed_by("F25519", "38009")
+        meme: empty_killed_by("F25519", "FG2")
     },
     // And now...
     // The yuyuyu sequels!
