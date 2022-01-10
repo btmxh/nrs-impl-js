@@ -1,5 +1,5 @@
 {
-    "last_updated": "2021-12-30T11:40:45.210Z",
+    "last_updated": "2022-01-10T05:20:25.257Z",
     "entries": [
         {
             "id": "5680",
@@ -2419,6 +2419,76 @@
             }
         },
         {
+            "id": "27441",
+            "title": "Show By Rock!!",
+            "type": "Anime",
+            "status": "Completed",
+            "seasonal": false,
+            "score": {
+                "emotion": {
+                    "sad": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "hype": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "comfy": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "love": {
+                        "chars": [],
+                        "value": 0
+                    },
+                    "humor": {
+                        "value": 0
+                    },
+                    "thriller": {
+                        "value": 0
+                    },
+                    "education": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "horror": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "community": {
+                        "standard_level": 1,
+                        "value": 0
+                    },
+                    "boredom": {
+                        "standard_level": 3,
+                        "value": 10
+                    },
+                    "special_emotions": {
+                        "scores": [],
+                        "value": 0
+                    },
+                    "value": 3
+                },
+                "meme": {
+                    "duration_standard_level": 0,
+                    "strength": 0,
+                    "killed_by": [
+                        "FG2"
+                    ],
+                    "value": 0.82
+                },
+                "music": {
+                    "value": 2
+                },
+                "additional": {
+                    "scores": [],
+                    "value": 0
+                },
+                "value": 2.7729999999999997
+            }
+        },
+        {
             "id": "28677",
             "title": "Yamada-kun to 7-nin no Majo (TV)",
             "type": "Anime",
@@ -2990,6 +3060,76 @@
                     "value": 0
                 },
                 "value": 3.715
+            }
+        },
+        {
+            "id": "32038",
+            "title": "Show By Rock!!",
+            "type": "Anime",
+            "status": "Completed",
+            "seasonal": false,
+            "score": {
+                "emotion": {
+                    "sad": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "hype": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "comfy": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "love": {
+                        "chars": [],
+                        "value": 0
+                    },
+                    "humor": {
+                        "value": 0
+                    },
+                    "thriller": {
+                        "value": 0
+                    },
+                    "education": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "horror": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "community": {
+                        "standard_level": 1,
+                        "value": 0
+                    },
+                    "boredom": {
+                        "standard_level": 3,
+                        "value": 10
+                    },
+                    "special_emotions": {
+                        "scores": [],
+                        "value": 0
+                    },
+                    "value": 3
+                },
+                "meme": {
+                    "duration_standard_level": 0,
+                    "strength": 0,
+                    "killed_by": [
+                        "FG2"
+                    ],
+                    "value": 0.82
+                },
+                "music": {
+                    "value": 2
+                },
+                "additional": {
+                    "scores": [],
+                    "value": 0
+                },
+                "value": 2.7729999999999997
             }
         },
         {
@@ -8864,7 +9004,7 @@
             "id": "44275",
             "title": "Selection Project",
             "type": "Anime",
-            "status": "Watching",
+            "status": "Completed",
             "seasonal": false,
             "score": {
                 "emotion": {
@@ -8919,7 +9059,7 @@
                     "strength": 0,
                     "killed_by": [
                         "F25519",
-                        "38009"
+                        "FG2"
                     ],
                     "value": 0.82
                 },
@@ -9077,7 +9217,7 @@
             "id": "47790",
             "title": "Sekai Saikou no Ansatsusha, Isekai Kizoku ni Tensei suru",
             "type": "Anime",
-            "status": "Watching",
+            "status": "Completed",
             "seasonal": false,
             "score": {
                 "emotion": {
@@ -9130,7 +9270,7 @@
                     "strength": 7,
                     "killed_by": [
                         "F25519",
-                        "38009"
+                        "FG2"
                     ],
                     "value": 6.920000000000001
                 },
@@ -9148,7 +9288,7 @@
             "id": "48483",
             "title": "Mieruko-chan",
             "type": "Anime",
-            "status": "Watching",
+            "status": "Completed",
             "seasonal": false,
             "score": {
                 "emotion": {
@@ -9187,21 +9327,21 @@
                         "value": 0
                     },
                     "boredom": {
-                        "standard_level": 2,
-                        "value": 8
+                        "standard_level": 0,
+                        "value": 2
                     },
                     "special_emotions": {
                         "scores": [],
                         "value": 0
                     },
-                    "value": 2.4
+                    "value": 0.6
                 },
                 "meme": {
                     "duration_standard_level": 0,
                     "strength": 0,
                     "killed_by": [
                         "F25519",
-                        "38009"
+                        "FG2"
                     ],
                     "value": 0.82
                 },
@@ -9212,14 +9352,14 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 2.163
+                "value": 0.633
             }
         },
         {
             "id": "48644",
             "title": "Gyakuten Sekai no Denchi Shoujo",
             "type": "Anime",
-            "status": "Watching",
+            "status": "Completed",
             "seasonal": false,
             "score": {
                 "emotion": {
@@ -9232,8 +9372,14 @@
                         "value": 0
                     },
                     "comfy": {
-                        "impacts": [],
-                        "value": 0
+                        "impacts": [
+                            {
+                                "standard_level": 0,
+                                "pads": 0,
+                                "value": 1
+                            }
+                        ],
+                        "value": 1
                     },
                     "love": {
                         "chars": [],
@@ -9265,14 +9411,14 @@
                         "scores": [],
                         "value": 0
                     },
-                    "value": 3
+                    "value": 3.3
                 },
                 "meme": {
                     "duration_standard_level": 0,
                     "strength": 0,
                     "killed_by": [
                         "F25519",
-                        "38009"
+                        "FG2"
                     ],
                     "value": 0.82
                 },
@@ -9283,7 +9429,7 @@
                     "scores": [],
                     "value": 0
                 },
-                "value": 2.6729999999999996
+                "value": 2.9279999999999995
             }
         },
         {
@@ -9315,7 +9461,7 @@
                                         "to": ""
                                     }
                                 ],
-                                "influential_days": 363.4866344097222,
+                                "influential_days": 374.22251460648147,
                                 "value": 10
                             }
                         ],
@@ -11855,6 +12001,76 @@
                     "value": 0.25
                 },
                 "value": 8.020999999999999
+            }
+        },
+        {
+            "id": "F27441",
+            "title": "Show By Rock!!  (Franchise Entry)",
+            "type": "Franchise",
+            "status": "Non-watchable",
+            "seasonal": false,
+            "score": {
+                "emotion": {
+                    "sad": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "hype": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "comfy": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "love": {
+                        "chars": [],
+                        "value": 0
+                    },
+                    "humor": {
+                        "value": 0
+                    },
+                    "thriller": {
+                        "value": 0
+                    },
+                    "education": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "horror": {
+                        "impacts": [],
+                        "value": 0
+                    },
+                    "community": {
+                        "standard_level": 1,
+                        "value": 0
+                    },
+                    "boredom": {
+                        "standard_level": 3,
+                        "value": 10
+                    },
+                    "special_emotions": {
+                        "scores": [],
+                        "value": 0
+                    },
+                    "value": 3
+                },
+                "meme": {
+                    "duration_standard_level": 0,
+                    "strength": 0,
+                    "killed_by": [
+                        "FG2"
+                    ],
+                    "value": 0.82
+                },
+                "music": {
+                    "value": 2.4
+                },
+                "additional": {
+                    "scores": [],
+                    "value": 0
+                },
+                "value": 2.7929999999999997
             }
         }
     ]

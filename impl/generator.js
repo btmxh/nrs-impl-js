@@ -2289,4 +2289,41 @@ output({
         ],
         music: 3,
     },
+    // based gigachad rst changed da world and became meta
+    // based gigachad rst changed da world and became meta
+    // based gigachad rst changed da world and became meta
+    // based gigachad rst changed da world and became meta
+    // based gigachad rst changed da world and became meta
+    // based gigachad rst changed da world and became meta
+
+    // 27441 - Show By Rock!!
+    "27441": {
+        title: "Show By Rock!!",
+        best_girl: "Hijirikawa Cyan",
+        // seishun non-stop asterisk dnb remix is an absolute banger
+        // catJAM rainbowPls catJAM rainbowPls catJAM rainbowPls catJAM rainbowPls 
+        // catJAM rainbowPls catJAM rainbowPls catJAM rainbowPls catJAM rainbowPls 
+        // catJAM rainbowPls catJAM rainbowPls catJAM rainbowPls catJAM rainbowPls 
+        music: 2,
+        // when rework comes this shit is gonna be buffed hard
+
+        meme: empty_killed_by("FG2")
+    },
+
+    // 32038 - Show By Rock!! #
+    "32038": {
+        title: "Show By Rock!! #",
+        best_girl: "Hijirikawa Cyan",
+
+        // close to you cyan ver slaps
+        music: 2,
+
+        meme: empty_killed_by("FG2")
+    },
+
+    // F27441 - Show By Rock!!
+    "F27441": combine({
+        title: "Show By Rock!!  (Franchise Entry)",
+        from: ["27441", "32038"],
+    })
 });
