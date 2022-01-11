@@ -2093,7 +2093,7 @@ output({
         // based music
         // banger
         // nanahira xd
-        best_girl: "Aone Shikimiya",
+        best_girl: "Mana Shikimiya",
         // funny lmao
 
         // 367days and ld
