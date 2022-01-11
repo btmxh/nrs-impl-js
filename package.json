@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "node impl/generator.js",
+    "generate": "ts-node impl/generator_2.0.ts",
     "make_csv": "node scripts/make_csv.js"
   },
   "author": "ngoduyanh",
@@ -14,5 +14,9 @@
     "csv": "^5.5.3",
     "glob": "^7.2.0",
     "jsonc": "^2.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }
